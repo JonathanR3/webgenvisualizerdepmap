@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #323837;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+li, a {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #C8CBCB;
+    list-style: none;
+    font-size: 30px;
+}
+
+.slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+.slides {
+    display: none;
+}
+
+#slide-img {
+    max-width: 500px;
+    height: auto;
+    margin-left: 40.2%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    width: auto;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: -25px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#drop-header {
+    margin-top: 1%;
+    margin-left:  50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: goldenrod;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+#model-drop-down {
+    margin-top: 5%;
+    margin-left:  50%;
+    transform: translateX(-50%);
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#select-model {
+    width: 200px;
+    font-size: 15px;
+    padding: 5px;
+    background-color: grey;
+    color: goldenrod;
+}
+
+#model-options {
+    color: red;
+    background-color: black;
+}
+
+.footer {
+    height: 2.5rem;
+    width: 100%;
+    position: absolute;
+    padding: 30px 10%;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #C8CBCB;
+    font-weight: bold;
+}
+
+.footer-content p, a{
+    background-color: #6C7574;
+    font-size: 18px;
+}
+
+.info {
+    background-color: #6C7574;
+}
+
+.footer-col {
+    white-space: nowrap;
+    background-color: #6C7574;
+    flex-basis: 25%;
+    text-decoration: underline;
+    padding: 30px 10%;
+    font-size: 20px;
+}

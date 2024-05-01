@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Resources</title>
+        <meta name="description" content="Graphical representations with the Dep Map API">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../pagestyles.css">
+    </head>
+    <div class ="page-container">
+        <header class = "header">
+            <div id = "slideshow">
+                <div class = "slide fade">
+                    <img src = "../images/cancertype.png" id = "slide-img" style = "width: 100%">
+                </div>
+                <div class = "slide fade">
+                    <img src = "../images/breastcancer.png" id = "slide-img" style = "width: 100%">
+                </div>
+                <div class = "slide fade">
+                    <img src = "../images/generalcancer.png" id = "slide-img" style = "width: 100%">
+                </div>
+                <a class = "prev" onclick = "changeSlide(-1)">&#10094;</a>
+                <a class = "next" onclick = "changeSlide(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style = "text-align:center;">
+                <span class = "dot" onclick = "setSlide(1)"></span>
+                <span class = "dot" onclick = "setSlide(2)"></span>
+                <span class = "dot" onclick = "setSlide(3)"></span>
+            </div>
+        </header>
+        <footer class = "footer">
+            <div class ="footer-content">
+                <div class = "footer-col">
+                    <a href = "../index.html">Home</a>
+                    <br></br>
+                    <a href = "about.html">About</a>
+                    <br></br>
+                    <a href = "https://www.sanger.ac.uk/news/#" rel = "noopener noreferrer" target = "_blank">Sanger News Feed</a>
+                </div>
+                <div class = "footer-col">
+                    <a href = "https://depmap.sanger.ac.uk/documentation/api/" rel = "noopener noreferrer" target = "_blank">API Documentation</a>
+                    <br></br>
+                    <a href = "https://www.cancerrxgene.org/" rel = "noopener noreferrer" target = "_blank">Genomics of Cancer Drug Sensitivity</a>
+                    <br></br>
+                    <a href = "https://cellmodelpassports.sanger.ac.uk/passports" rel = "noopener noreferrer" target = "_blank">Official Models</a>
+                </div>
+                <div class = "footer-col">
+                    <p style = "margin-bottom: 0.5rem;">Extras</p>
+                    <div class = "info" style = "width: 50px; height: 45px; border-radius: 10px; margin-bottom: 0.5rem"><a href = "https://depmap.sanger.ac.uk/" rel = "noopener noreferrer" target = "_blank"><img style = "width: 50px; height: 45px; border-radius: 10px;" src = "../images/depmap.png" alt = "DepMap"></a></div>
+                    <div class = "info" style = "width: 50px; height: 45px; border-radius: 10px"><a href = "https://github.com/JonathanR3" rel = "noopener noreferrer" target = "_blank"><img style = "width: 50px; height: 45px; border-radius: 10px;" src = "../images/github.png" alt = "Github"></a></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <body>
+        <script src="../resources.js" async defer></script>
+    </body>
+</html>
