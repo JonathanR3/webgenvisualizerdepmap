@@ -19,30 +19,46 @@ li, a {
     font-size: 30px;
 }
 
-.slideshow {
-    max-width: 1000px;
+/* Container for the slideshow */
+#slideshow-container {
     position: relative;
-    margin: auto;
-  }
-  
-.slides {
-    display: none;
+    display: flex;
+    justify-content: center; /* Center the slideshow horizontally */
+    align-items: center;
+    width: 100%;
+    overflow: hidden; /* Hide any overflow */
+    max-width: 1000px; /* Adjust if needed */
+    margin: auto; /* Center the container itself */
 }
 
-#slide-img {
-    max-width: 500px;
+/* Slideshow itself */
+#slideshow {
+    display: flex;
+    justify-content: center; /* Center slides horizontally */
+    align-items: center;
+    width: 100%;
+}
+
+/* Individual slides */
+.slide {
+    display: none; /* Hide slides by default */
+    text-align: center; /* Center content inside slides */
+}
+
+.slide img {
+    display: block;
+    margin: 0 auto; /* Center images horizontally within slides */
+    max-width: 100%; /* Ensure image does not overflow */
     height: auto;
-    margin-left: 40.2%;
 }
 
+/* Navigation arrows */
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 30%;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Perfect vertical alignment */
     width: auto;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: -25px;
     padding: 16px;
     color: white;
     font-weight: bold;
@@ -53,27 +69,16 @@ li, a {
 }
 
 .next {
-    right: 0;
+    right: 0; /* Aligns the next arrow to the right */
     border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0; /* Aligns the prev arrow to the left */
 }
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
 }
 
 .fade {

@@ -8,34 +8,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../pagestyles.css">
     </head>
-    <div class ="page-container">
-        <header class = "header">
-            <div id = "slideshow">
-                <div class = "slide fade">
-                    <img src = "../images/cancertype.png" id = "slide-img" style = "width: 100%">
+    <div class="page-container">
+        <header class="header">
+            <div id="slideshow-container">
+                <div id="slideshow">
+                    <div class="slide fade">
+                        <img src="../images/cancertype.png" id="slide-img" style="width: 100%">
+                    </div>
+                    <div class="slide fade">
+                        <img src="../images/breastcancer.png" id="slide-img" style="width: 100%">
+                    </div>
+                    <div class="slide fade">
+                        <img src="../images/generalcancer.png" id="slide-img" style="width: 100%">
+                    </div>
                 </div>
-                <div class = "slide fade">
-                    <img src = "../images/breastcancer.png" id = "slide-img" style = "width: 100%">
-                </div>
-                <div class = "slide fade">
-                    <img src = "../images/generalcancer.png" id = "slide-img" style = "width: 100%">
-                </div>
-                <a class = "prev" onclick = "changeSlide(-1)">&#10094;</a>
-                <a class = "next" onclick = "changeSlide(1)">&#10095;</a>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
             </div>
             <br>
-            <div style = "text-align:center;">
-                <span class = "dot" onclick = "setSlide(1)"></span>
-                <span class = "dot" onclick = "setSlide(2)"></span>
-                <span class = "dot" onclick = "setSlide(3)"></span>
-            </div>
         </header>
         <footer class = "footer">
             <div class ="footer-content">
                 <div class = "footer-col">
                     <a href = "../index.html">Home</a>
-                    <br></br>
-                    <a href = "about.html">About</a>
                     <br></br>
                     <a href = "https://www.sanger.ac.uk/news/#" rel = "noopener noreferrer" target = "_blank">Sanger News Feed</a>
                 </div>
@@ -53,6 +48,7 @@
                 </div>
             </div>
         </footer>
+    </div>
     </div>
     <body>
         <script src="../resources.js" async defer></script>
