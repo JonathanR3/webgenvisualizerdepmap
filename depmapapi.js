@@ -1,5 +1,6 @@
 const depmapURL = "https://api.cellmodelpassports.sanger.ac.uk";
 let choices = [];
+let data = document.createElement('div');
 let modelName;
 let modelType;
 let modelGrowth;
@@ -11,6 +12,7 @@ let names;
 let info;
 
 document.addEventListener("DOMContentLoaded", async function() {
+    data.innerHTML = "";
     let cache = sessionStorage.getItem('choices');
     if (cache) {
         choices = JSON.parse(cache);
@@ -97,8 +99,6 @@ function dropDownModels() {
 }
 
 function showData() {
-    let data = document.getElementById('models-data');
-    data.innerHTML = '';
     let counter = 0;
     for (let i = 0; i < modelName.length; i++) {
         if (modelName[i] === info) {
@@ -110,10 +110,7 @@ function showData() {
     let dataContainer = document.createElement('div');
     dataContainer.style.color = "white";
     dataContainer.style.margin = "0 auto";
-    dataContainer.style.marginTop = "10%";
-    dataContainer.style.position = "relative";
     dataContainer.style.marginLeft = "50%";
-    dataContainer.style.transform = "translateX(-50%)";
 
     let type = document.createElement('h2');
     type.textContent = modelType[counter];
@@ -144,9 +141,9 @@ function showData() {
     dataContainer.appendChild(mutationMB);
 
     data.appendChild(dataContainer);
-    console.log(modelGrowth);
-    console.log(modelMutation);
-    console.log(modelMutationMB);
+    console.log(modelGrowth[counter]);
+    console.log(modelMutation[counter]);
+    console.log(modelMutationMB[counter]);
 }
 
 
