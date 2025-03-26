@@ -7,12 +7,24 @@
         <meta name="description" content="Graphical representations with the Dep Map API">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../pagestyles.css">
+        <script src="https://cdn.plot.ly/plotly-3.0.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     </head>
     <div class ="page-container">
         <body>
+            <h3 id = "drop-header">Plots</h3>
+            <div id="plot-container"></div>        
+
             <h3 id = "drop-header">Cell Models</h3>
-            <div id = "model-drop-down"></div>
-            <div id  = "models-data"></div>
+            <div id="models-container"></div>
+            <div id="pagination"></div>
+            <!-- Modal for displaying model details -->
+            <div id="model-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="modal-info"></div>
+                </div>
+            </div>
             <script src="../depmapapi.js" async defer></script>
         </body>
         <footer class = "footer">
